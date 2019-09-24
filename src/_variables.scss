@@ -1,0 +1,18 @@
+%font {
+    font-family: 'Manjari', sans-serif;
+    font-weight: 400;
+}
+
+@mixin font {
+    @extend %font;
+}
+
+@mixin font-bold {
+    @extend %font;
+    font-weight: 700;
+}
+
+@mixin font-light {
+    @extend %font;
+    font-weight: 100;
+}

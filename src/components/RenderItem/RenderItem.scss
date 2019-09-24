@@ -1,0 +1,32 @@
+.single-item {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    // background: rgb(0, 0, 0);
+    // color: rgb(235, 235, 235);
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        > img {
+            width: 32px;
+            height: 32px;
+        }
+    } 
+
+    > section {
+        width: 200px;
+        text-align: left;
+        margin-left: 16px;
+
+        > h1:first-child {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+// .single-item:nth-child(2n) {
+//     background: rgb(24, 24, 24);
+// }
