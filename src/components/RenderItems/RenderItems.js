@@ -2,19 +2,19 @@ import React, { useEffect, useState } from 'react'
 import RenderItem from '../RenderItem/RenderItem'
 import axios from 'axios'
 
-const RenderItems = () => {
+const RenderItems = ({search}) => {
     let [items, setItems] = useState()
     let itemComponentList = []
     
     useEffect(() => {
-        async function fetchData(search = '') {
-            const result = await axios.get(`/api/items?search=${search}`)
+        async function fetchData() {
+            const result = await axios.get(`/api/items?search=${search}`).catch((error) => error)
 
             setItems(result.data)
         }
         
         fetchData()
-    }, [])
+    }, [search])
 
     return (
         <div>
